@@ -38,8 +38,8 @@ selected_sidebar_stock = st.sidebar.radio("Select a stock:", st.session_state['l
 # Main page
 st.title("Live Stock Market Data")
 
-ticker = st.text_input("Enter stock ticker (e.g., AAPL, GOOGL):")
-period = st.selectbox("Select period:", ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'])
+ticker = st.sidebar.text_input("Enter stock ticker (e.g., AAPL, GOOGL):")
+period = st.sidebar.selectbox("Select period:", ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'])
 
 if ticker:
     data = fetch_stock_data(ticker, period)
