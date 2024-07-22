@@ -29,7 +29,7 @@ def update_last_10_stocks(ticker):
         if len(st.session_state['last_10_stocks']) > 10:
             st.session_state['last_10_stocks'].pop(0)
 
-""" def checkTicker(ticker, period, interval):
+def checkTicker(ticker, period, interval):
     check = fetch_stock_data(ticker, period, interval)
     if not check.empty:
         update_last_10_stocks(ticker)
@@ -37,7 +37,7 @@ def update_last_10_stocks(ticker):
         return True
     else:
         st.sidebar.error("No data found for the given ticker")
-        return False """
+        return False
 
 # Sidebar
 st.sidebar.image("ARTI404-Project/stock_logo.png", caption="Stock Logo")
