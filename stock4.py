@@ -55,16 +55,16 @@ market = st.sidebar.selectbox("Select market:", ["US", "Canada", "UK", "Germany"
 # Define valid intervals for each period
 interval_options = {
     '1d': ['1m', '2m', '5m', '15m', '30m', '60m', '90m'],
-    '5d': ['5m', '15m', '30m', '60m', '90m', '1d'],
-    '1mo': ['15m', '30m', '60m', '90m', '1h', '1d', '5d', '1wk'],
+    '5d': ['30m', '60m', '90m', '1d'],
+    '1mo': ['1d', '5d', '1wk'],
     '3mo': ['1d', '5d', '1wk', '1mo'],
     '6mo': ['1d', '5d', '1wk', '1mo', '3mo'],
-    '1y': ['1h', '1d', '5d', '1wk', '1mo', '3mo'],
-    '2y': ['1d', '5d', '1wk', '1mo', '3mo'],
-    '5y': ['1d', '5d', '1wk', '1mo', '3mo'],
-    '10y': ['1wk', '1mo', '3mo'],
-    'ytd': ['1d', '5d', '1wk', '1mo'],
-    'max': ['1wk', '1mo', '3mo']
+    '1y': ['1d', '5d', '1wk', '1mo', '3mo', '6mo'],
+    '2y': ['1d', '5d', '1wk', '1mo', '3mo', '6mo', '1y'],
+    '5y': ['1d', '5d', '1wk', '1mo', '3mo', '6mo', '1y', '2y'],
+    '10y': ['1d', '5d', '1wk', '1mo', '3mo', '6mo', '1y', '2y', '5y'],
+    'ytd': ['90m', '1d', '5d', '1wk', '1mo', '3mo', '6mo'],
+    'max': ['1d', '5d', '1wk', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y']
 }
 
 # Function to update interval options based on selected period
