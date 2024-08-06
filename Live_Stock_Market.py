@@ -41,7 +41,7 @@ def check_ticker(ticker, period, interval):
     return False
 
 # Sidebar
-st.sidebar.image("../ARTI404-Project/stock_logo.png", caption="Stock Logo")
+st.sidebar.image("stock_logo.png", caption="Stock Logo")
 st.sidebar.title("Last 10 Stocks")
 selected_sidebar_stock = st.sidebar.radio("Select a stock:", st.session_state['last_10_stocks'], index=0 if st.session_state['last_10_stocks'] else None)
 
